@@ -1,0 +1,38 @@
+.search-page {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .search-bar {
+    margin-bottom: 20px;
+  }
+  
+  .search-bar input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .search-results {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .search-result {
+    width: 200px;
+    margin: 10px;
+  }
+  
+  .search-result img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .search-result h3 {
+    margin-top: 10px;
+    font-size: 16px;
+    text-align: center;
+  }
+  
