@@ -4,16 +4,23 @@ import './RowPost.css'
 import { API_KEY, imageUrl} from '../../constants/constants'
 import { useEffect,useState } from 'react'
 import axios from '../../axios'
-function RowPost(props) {
+function RowPost({url, params={}, type="movie",isSmall,title}) {
   const [movies,setMovies] =useState([]);
   const [urlId, setUrlId] = useState('');
+
+
+
+console.log({params})
+
   useEffect(() => {
-    axios.get(props.url).then((response)=>{
+    axios.get(url, {
+      params: params,
+    }).then((response)=>{
       console.log(response.data);
       setMovies(response.data.results);
-    }).catch(err=>{
-     // alert(err);
-    })
+    }).catch((error) => {
+      alert('Error fetching search results:', error);
+    });
   }, [])
   const opts = {
     height: '390',
@@ -25,7 +32,7 @@ function RowPost(props) {
   };
   const handleMovie = (id)=>{
         console.log(id) ;
-        axios.get(`/movie/${id}/videos?api_key=${API_KEY}&language=en-US`).then(response=>{
+        axios.get(`/${type}/${id}/videos?api_key=${API_KEY}&language=en-US`).then(response=>{
           if(response.data.results.length!==0){
             setUrlId(response.data.results[0])
           }
@@ -36,12 +43,12 @@ function RowPost(props) {
   }
   return (
     <div className='row'>
-      <h2>{props.title}</h2>
+      <h2>{title}</h2>
       <div className='posters'>
         {movies.map((obj)=>
              <img onClick={()=>
                 handleMovie(obj.id)
-            } className={props.isSmall ? 'smallPoster': 'poster'} src={`${imageUrl+obj.backdrop_path}`} alt="poster" />
+            } className={isSmall ? 'smallPoster': 'poster'} src={`${imageUrl+obj.backdrop_path}`} alt="poster" />
         )}
       </div>
        { urlId && <Youtube opts={opts} videoId={urlId.key}/>}

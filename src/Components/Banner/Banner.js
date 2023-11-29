@@ -28,9 +28,10 @@ function Banner() {
             <button className='button'>My List</button>
           </div>
           <h1 className='description'>{movie ? movie.overview : ""}</h1>
+          <h1 className='popularity'>Rating:{movie ? movie.popularity:""}</h1>
        </div>
        <div className="fade_bottom"></div>
-
+       
     </div>
   )
 }
