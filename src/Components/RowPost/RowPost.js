@@ -45,10 +45,12 @@ console.log({params})
     <div className='row'>
       <h2>{title}</h2>
       <div className='posters'>
+     
         {movies.map((obj)=>
              <img onClick={()=>
                 handleMovie(obj.id)
             } className={isSmall ? 'smallPoster': 'poster'} src={`${imageUrl+obj.backdrop_path}`} alt="poster" />
+
         )}
       </div>
        { urlId && <Youtube opts={opts} videoId={urlId.key}/>}

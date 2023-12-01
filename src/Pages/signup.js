@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './signup.css';
-
+import NavBar from '../Components/NavBar/NavBar';
 const Signup = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -13,7 +13,10 @@ const Signup = () => {
   };
 
   return (
+    <>
+    <NavBar/>
     <div className="signup-container">
+      
       <div className="signup-form">
         <h1>Sign Up</h1>
         <form>
@@ -44,6 +47,7 @@ const Signup = () => {
         </p>
       </div>
     </div>
+    </>
   );
 };
 

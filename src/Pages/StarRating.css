@@ -1,0 +1,12 @@
+/* StarRating.css */
+
+.star-rating {
+    display: flex;
+  }
+  
+  .star {
+    font-size: 20px; /* Adjust the size of the stars */
+    color: gold;
+    margin-right: 5px;
+  }
+  

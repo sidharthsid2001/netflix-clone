@@ -1,0 +1,53 @@
+/* Footer Styles */
+footer {
+    background-color: #111;
+    color: #fff;
+    padding: 40px 0;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start; /* Center items vertically */
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Wrap items if they exceed the container width */
+  }
+  
+  .footer-section {
+    flex: 1 1 300px; /* Flex properties for equal width, but can grow and shrink based on content */
+    margin: 0 10px;
+    text-align: center; /* Center text within each section */
+  }
+  
+  .footer-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .social-icons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center social icons horizontally */
+  }
+  
+  .social-icons li {
+    margin-right: 10px;
+  }
+  
+  .social-icons a {
+    color: #fff;
+    font-size: 1.2rem;
+    text-decoration: none;
+  }
+  
+  .copyright {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  
+  /* FontAwesome Icons (Assuming you're using FontAwesome) */
+  @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css');
+  
