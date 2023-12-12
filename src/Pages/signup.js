@@ -38,7 +38,7 @@ const Signup = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <Link className='signup-button'  onClick={handleSignup}>
+          <Link className='signup-button' to='/login' onClick={handleSignup}>
             Sign Up
           </Link>
         </form>
