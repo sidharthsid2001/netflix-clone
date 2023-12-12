@@ -9,6 +9,7 @@ import Login from "./Pages/login";
 import Signup from "./Pages/signup";
 import Search from "./Pages/Search";
 import Account from "./Pages/Account";
+import MyList from "./Pages/Mylist";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
   {
     path: "/account",
     element: <Account/>,
+  },
+  {
+    path: "/mylist",
+    element: <MyList/>,
   },
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(

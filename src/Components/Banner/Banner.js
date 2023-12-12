@@ -48,7 +48,7 @@ function Banner() {
           <h1 className='title'>{movie ? movie.title || movie.name : ""}</h1>
           <div className='banner_buttons'>
             <button className='button'onClick={()=> handleMovie(movie.id,movie.media_type)} >Play</button>
-            <button className='button'>My List</button>
+            <button className='button' onClick={() => window.location.href = '/mylist'}>My List</button>
           </div>
           <h1 className='description'>{movie ? movie.overview : ""}</h1>
           <h1 className='popularity'>Rating{movie ? <StarRating popularity={movie.popularity}/>:""}</h1>
